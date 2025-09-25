@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVision | خبرگزاری فناوری</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* افکت اسکرول معکوس */
+        [data-aos="fade-up-reverse"] {
+            transform: translateY(40px);
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+        [data-aos="fade-up-reverse"].aos-animate {
+            transform: translateY(-0px);
+            opacity: 1;
+        }
+    </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold gradient-text">TechVision</a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">صفحه اصلی</a>
+                <a href="news.html" class="text-gray-600 hover:text-blue-600 transition">اخبار</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">درباره ما</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">تماس با ما</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full hidden">
+            <nav class="flex flex-col items-center gap-4 py-4">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">صفحه اصلی</a>
+                <a href="news.html" class="text-gray-600 hover:text-blue-600 transition">اخبار</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">درباره ما</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section with Vanta.js -->
+    <div id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0" id="vanta-bg"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6" data-aos="fade-down">
+                <span class="gradient-text">TechVision</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                آخرین اخبار و تحولات دنیای برنامه نویسی و طراحی وب
+            </p>
+            <div class="flex gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="#news" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition duration-300">
+                    مشاهده اخبار
+                </a>
+                <a href="contact.html" class="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition duration-300">
+                    تماس با ما
+                </a>
+                <a href="about.html" class="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-medium transition duration-300">
+                    درباره ما
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#news" class="animate-bounce">
+                <i data-feather="chevron-down" class="text-white w-10 h-10"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- News Section -->
+    <section id="news" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                <span class="gradient-text">آخرین اخبار</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg news-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/technology/1024x576/1" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>15 مرداد 1402</span>
+                            <span class="mx-2">•</span>
+                            <span>برنامه نویسی</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">انتشار نسخه جدید فریمورک React</h3>
+                        <p class="text-gray-600 mb-4">نسخه 19 فریمورک محبوب React با قابلیت های جدید منتشر شد که توسعه دهندگان را شگفت زده کرد.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            ادامه مطلب
+                            <i data-feather="arrow-left" class="mr-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg news-card transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/technology/1024x576/2" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>10 مرداد 1402</span>
+                            <span class="mx-2">•</span>
+                            <span>طراحی وب</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">روندهای جدید طراحی UI در سال 2023</h3>
+                        <p class="text-gray-600 mb-4">طراحان وب باید این 5 روند جدید را در پروژه های خود به کار بگیرند تا از رقبا پیشی بگیرند.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            ادامه مطلب
+                            <i data-feather="arrow-left" class="mr-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg news-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/technology/1024x576/3" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>5 مرداد 1402</span>
+                            <span class="mx-2">•</span>
+                            <span>هوش مصنوعی</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">تاثیر هوش مصنوعی بر توسعه نرم افزار</h3>
+                        <p class="text-gray-600 mb-4">چگونه ابزارهای مبتنی بر هوش مصنوعی در حال تغییر روش های سنتی توسعه نرم افزار هستند.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                            ادامه مطلب
+                            <i data-feather="arrow-left" class="mr-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="news.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    مشاهده همه اخبار
+                    <i data-feather="arrow-left" class="mr-2 w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                <span class="gradient-text">خدمات ما</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 bg-opacity-50 rounded-xl p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="code" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">توسعه نرم افزار سفارشی</h3>
+                    <p class="text-gray-300">طراحی و توسعه راهکارهای نرم افزاری اختصاصی متناسب با نیازهای کسب و کار شما</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-800 bg-opacity-50 rounded-xl p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="layout" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">طراحی وب مدرن</h3>
+                    <p class="text-gray-300">طراحی وبسایت های واکنشگرا و مدرن با جدیدترین تکنولوژی های روز دنیا</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-800 bg-opacity-50 rounded-xl p-8 backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="smartphone" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">توسعه اپلیکیشن موبایل</h3>
+                    <p class="text-gray-300">ساخت اپلیکیشن های موبایل با کیفیت برای پلتفرم های iOS و Android</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TechVision</h3>
+                    <p class="text-gray-400">پیشرو در ارائه راهکارهای نرم افزاری و طراحی وب با کیفیت</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">لینک های سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">صفحه اصلی</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition">اخبار</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">درباره ما</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">خدمات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">توسعه نرم افزار</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">طراحی وب</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">اپلیکیشن موبایل</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">مشاوره فناوری</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">تماس با ما</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="ml-2 w-4 h-4"></i>
+                            تهران، خیابان آزادی، پلاک 123
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="ml-2 w-4 h-4"></i>
+                            021-12345678
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="ml-2 w-4 h-4"></i>
+                            info@techvision.ir
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 TechVision. تمام حقوق محفوظ است.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: true // فعال‌سازی افکت معکوس هنگام اسکرول به بالا
+        });
+
+        // Initialize Vanta.js
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            backgroundColor: 0x111827,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>

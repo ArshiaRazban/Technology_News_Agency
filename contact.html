@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | TechVision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold gradient-text">TechVision</a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">صفحه اصلی</a>
+                <a href="news.html" class="text-gray-600 hover:text-blue-600 transition">اخبار</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">درباره ما</a>
+                <a href="contact.html" class="text-blue-600 font-medium">تماس با ما</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-btn">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full hidden">
+            <nav class="flex flex-col items-center gap-4 py-4">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">صفحه اصلی</a>
+                <a href="news.html" class="text-gray-600 hover:text-blue-600 transition">اخبار</a>
+                <a href="about.html" class="text-gray-600 hover:text-blue-600 transition">درباره ما</a>
+                <a href="contact.html" class="text-blue-600 font-medium">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">تماس با ما</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                ما آماده پاسخگویی به سوالات و پیشنهادات شما هستیم
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold mb-6">پیام خود را ارسال کنید</h2>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">نام و نام خانوادگی</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">ایمیل</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">موضوع</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">پیام</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition duration-300">
+                                ارسال پیام
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-2xl font-bold mb-6">اطلاعات تماس</h2>
+                    <p class="text-gray-600 mb-8">
+                        برای ارتباط با ما می توانید از طریق اطلاعات زیر اقدام کنید یا فرم تماس را پر کنید. ما در اسرع وقت به پیام های شما پاسخ خواهیم داد.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Contact Card 1 -->
+                        <div class="bg-white rounded-xl shadow-md p-6 contact-card transition duration-300">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-blue-100 rounded-lg p-3">
+                                    <i data-feather="map-pin" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <div class="mr-4">
+                                    <h3 class="text-lg font-bold mb-2">آدرس دفتر مرکزی</h3>
+                                    <p class="text-gray-600">تهران، خیابان آزادی، پلاک 123، طبقه 4، واحد 12</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Card 2 -->
+                        <div class="bg-white rounded-xl shadow-md p-6 contact-card transition duration-300">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-purple-100 rounded-lg p-3">
+                                    <i data-feather="phone" class="w-6 h-6 text-purple-600"></i>
+                                </div>
+                                <div class="mr-4">
+                                    <h3 class="text-lg font-bold mb-2">تلفن های تماس</h3>
+                                    <p class="text-gray-600 mb-1">021-12345678</p>
+                                    <p class="text-gray-600">0912-3456789</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Card 3 -->
+                        <div class="bg-white rounded-xl shadow-md p-6 contact-card transition duration-300">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-100 rounded-lg p-3">
+                                    <i data-feather="mail" class="w-6 h-6 text-green-600"></i>
+                                </div>
+                                <div class="mr-4">
+                                    <h3 class="text-lg font-bold mb-2">ایمیل و شبکه های اجتماعی</h3>
+                                    <p class="text-gray-600 mb-1">info@techvision.ir</p>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="#" class="text-gray-400 hover:text-blue-600 transition">
+                                            <i data-feather="instagram" class="w-5 h-5"></i>
+                                        </a>
+                                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                                            <i data-feather="twitter" class="w-5 h-5"></i>
+                                        </a>
+                                        <a href="#" class="text-gray-400 hover:text-blue-700 transition">
+                                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-8 bg-white rounded-xl shadow-md overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.827941847246!2d51.38982131526953!3d35.69952398018426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQxJzU4LjMiTiA1McKwMjMnMjkuNSJF!5e0!3m2!1sen!2sir!4v1620000000000!5m2!1sen!2sir" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">
+                <span class="gradient-text">سوالات متداول</span>
+            </h2>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up">
+                    <button class="w-full px-6 py-4 text-right flex items-center justify-between focus:outline-none">
+                        <span class="text-lg font-medium">چگونه می توانم از خدمات شما استفاده کنم؟</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">
+                            برای استفاده از خدمات ما می توانید از طریق فرم تماس با ما درخواست خود را ارسال کنید یا با شماره های تماس ما ارتباط برقرار نمایید. پس از بررسی نیازهای شما، تیم فروش با شما تماس خواهد گرفت.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full px-6 py-4 text-right flex items-center justify-between focus:outline-none">
+                        <span class="text-lg font-medium">مدت زمان تحویل پروژه چقدر است؟</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">
+                            مدت زمان تحویل پروژه بستگی به پیچیدگی و حجم کار دارد. پس از بررسی نیازهای شما، زمان بندی دقیق پروژه ارائه خواهد شد. معمولاً پروژه های کوچک در 2-4 هفته و پروژه های بزرگ در 3-6 ماه تحویل داده می شوند.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button class="w-full px-6 py-4 text-right flex items-center justify-between focus:outline-none">
+                        <span class="text-lg font-medium">هزینه خدمات شما چگونه محاسبه می شود؟</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">
+                            هزینه خدمات بر اساس عوامل مختلفی مانند پیچیدگی پروژه، تکنولوژی های مورد استفاده، زمان تحویل و منابع مورد نیاز محاسبه می شود. پس از بررسی دقیق نیازهای شما، پیش فاکتور دقیق ارائه خواهد شد.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button class="w-full px-6 py-4 text-right flex items-center justify-between focus:outline-none">
+                        <span class="text-lg font-medium">آیا پشتیبانی پس از تحویل پروژه ارائه می دهید؟</span>
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-300 transform"></i>
+                    </button>
+                    <div class="px-6 pb-4 hidden">
+                        <p class="text-gray-600">
+                            بله، تمام پروژه های ما با گارانتی و پشتیبانی رایگان به مدت 6 ماه ارائه می شوند. پس از این مدت نیز می توانید با شرایط ویژه از خدمات پشتیبانی ما استفاده نمایید.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TechVision</h3>
+                    <p class="text-gray-400">پیشرو در ارائه راهکارهای نرم افزاری و طراحی وب با کیفیت</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">لینک های سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">صفحه اصلی</a></li>
+                        <li><a href="news.html" class="text-gray-400 hover:text-white transition">اخبار</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">درباره ما</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">خدمات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">توسعه نرم افزار</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">طراحی وب</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">اپلیکیشن موبایل</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">مشاوره فناوری</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">تماس با ما</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="map-pin" class="ml-2 w-4 h-4"></i>
+                            تهران، خیابان آزادی، پلاک 123
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="phone" class="ml-2 w-4 h-4"></i>
+                            021-12345678
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i data-feather="mail" class="ml-2 w-4 h-4"></i>
+                            info@techvision.ir
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 TechVision. تمام حقوق محفوظ است.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // FAQ Accordion
+        const faqButtons = document.querySelectorAll('.bg-white button');
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
